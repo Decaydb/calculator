@@ -83,7 +83,6 @@ func Solution(solFirst string, solSign string, solSecond string) {
 	if wichSystem == "roman" {
 		numOne = romanToArabic(solFirst)
 		numTwo = romanToArabic(solSecond)
-		print(numOne)
 
 		switch solSign {
 		case "+":
@@ -98,7 +97,6 @@ func Solution(solFirst string, solSign string, solSecond string) {
 		if res < 1 {
 			panic("Результатом вычисления римских чисел не может быть ноль или отрицательное число")
 		} else {
-
 			println(arabicToRoman(res))
 		}
 	}
@@ -109,7 +107,7 @@ func main() {
 	print("Введите выражение!\n")
 	var first, second, sign string //Хоть и объявлено некрасиво, но нужны лишь пустые строки.
 	fmt.Scan(&first, &sign, &second)
-	Solution(first, sign, second)
-	println(wichSystem)
 
+	Check(first, second)
+	Solution(first, sign, second)
 }
